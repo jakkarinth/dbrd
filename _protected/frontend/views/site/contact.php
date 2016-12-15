@@ -7,7 +7,7 @@ use yii\captcha\Captcha;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \frontend\models\ContactForm */
 
-$this->title = Yii::t('app', 'Contact');
+$this->title = Yii::t('app', 'ติดต่อเรา');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">

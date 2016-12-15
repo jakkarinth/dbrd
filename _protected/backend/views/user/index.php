@@ -7,17 +7,15 @@ use yii\grid\GridView;
 /* @var $searchModel common\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Users');
+$this->title = Yii::t('app', 'ข้อมูลผู้ใช้งานระบบ');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
     <h1>
 
-    <?= Html::encode($this->title) ?>
-
-    <span class="pull-right">
-        <?= Html::a(Yii::t('app', 'Create User'), ['create'], ['class' => 'btn btn-success']) ?>
+    <span class="pull-left">
+        <?= Html::a(Yii::t('app', 'เพิ่มผู้ใช้งานระบบ'), ['create'], ['class' => 'btn btn-success']) ?>
     </span>         
 
     </h1>

@@ -1,7 +1,7 @@
 <?php
 return [
-    'name' => 'DBRD||SURIN',
-    //'language' => 'sr',
+    'name' => 'ระบบบริหารจัดการโครงการวิจัยและงานสร้างสรรค์',
+    //'language' => 'th',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'formatter'=>[

@@ -6,11 +6,12 @@ $this->title = 'ระบบบริหารจัดการงานวิ�
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <h1>ยินดีตอนรับท่านเข้าสู่ </h1><h3>ระบบบริหารจัดการงานวิจัยและงานสร้างสรรค์</h3> <br>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+        <p class="lead">แผนกงานวิจัยและพัฒนา<br>
+        มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตสุรินทร์</p>
 
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p><a class="btn btn-lg btn-success" href="http://www.surin.rmuti.ac.th/research">คู่มือการใช้งานระบบ</a></p>
     </div>
 
     <div class="body-content">

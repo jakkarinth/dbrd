@@ -34,33 +34,33 @@ AppAsset::register($this);
             ]);
 
             // everyone can see Home page
-            $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']];
+            $menuItems[] = ['label' => Yii::t('app', 'หน้าแรก'), 'url' => ['/site/index']];
 
             // we do not need to display Article/index, About and Contact pages to editor+ roles
             if (!Yii::$app->user->can('editor')) 
             {
-                $menuItems[] = ['label' => Yii::t('app', 'Articles'), 'url' => ['/article/index']];
-                $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']];
-                $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
+                $menuItems[] = ['label' => Yii::t('app', 'บทคววม'), 'url' => ['/article/index']];
+                $menuItems[] = ['label' => Yii::t('app', 'เกี่ยวกับเรา'), 'url' => ['/site/about']];
+                $menuItems[] = ['label' => Yii::t('app', 'ติดต่อเรา'), 'url' => ['/site/contact']];
             }
 
             // display Article admin page to editor+ roles
             if (Yii::$app->user->can('editor'))
             {
-                $menuItems[] = ['label' => Yii::t('app', 'Articles'), 'url' => ['/article/admin']];
+                $menuItems[] = ['label' => Yii::t('app', 'บทความ'), 'url' => ['/article/admin']];
             }            
             
             // display Signup and Login pages to guests of the site
             if (Yii::$app->user->isGuest) 
             {
-                $menuItems[] = ['label' => Yii::t('app', 'Signup'), 'url' => ['/site/signup']];
-                $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
+                $menuItems[] = ['label' => Yii::t('app', 'สมัครสมาชิก'), 'url' => ['/site/signup']];
+                $menuItems[] = ['label' => Yii::t('app', 'เข้าสู่ระบบ'), 'url' => ['/site/login']];
             }
             // display Logout to all logged in users
             else 
             {
                 $menuItems[] = [
-                    'label' => Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
+                    'label' => Yii::t('app', 'ออกจากระบบ'). ' (' . Yii::$app->user->identity->username . ')',
                     'url' => ['/site/logout'],
                     'linkOptions' => ['data-method' => 'post']
                 ];
@@ -84,7 +84,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left">&copy; <?= Yii::t('app', Yii::$app->name) ?> <?= date('Y') ?></p>
+        <p class="pull-left"><?= Yii::t('app', Yii::$app->name) ?>   &copy; <?= date('Y') ?> พัฒนาโดย แผนกงานวิจัยและพัฒนา</p>
         <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>

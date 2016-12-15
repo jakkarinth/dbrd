@@ -7,9 +7,10 @@
             <div class="pull-left image">
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
+            
             <div class="pull-left info">
                 <p><?= Yii::$app->user->identity->username?> <a href="#"><i class="fa fa-circle text-success"></i> Online</a><p>
-                <p><?php echo Yii::$app->formatter->asDatetime(time());?></p>
+                <p><?php echo Yii::$app->formatter->asDate(time());?></p>
                 
             </div>
         </div>
@@ -32,15 +33,22 @@
                 'items' => [
                     ['label' => 'เมนูหลัก', 'options' => ['class' => 'header']],
                     ['label' => 'จัดการสิทธิ์ User', 'icon' => 'glyphicon glyphicon-user', 'url' => ['user/index']],
-                     //Drop Down Manu//
+                    ['label' => 'จัดการข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-registration-mark', 'url' => ['rs-info/index']],
+                    ['label' => 'จัดการข้อมูลโครงการวิจัย', 'icon' => 'glyphicon glyphicon-book', 'url' => ['rs-research/index']],
+                    ['label' => 'จัดการข้อมูลข้อเสนอโครงการ', 'icon' => 'glyphicon glyphicon-tags', 'url' => ['rs-proposal/index']],
+                    ['label' => 'จัดการข้อมูลการตีพิมพ์', 'icon' => 'glyphicon glyphicon-print', 'url' => ['/index']],
+                    ['label' => 'จัดการข้อมูลสิ่งประดิษฐ์', 'icon' => 'glyphicon glyphicon-wrench', 'url' => ['/index']],
+                    ['label' => 'จัดการ Copyright', 'icon' => 'glyphicon glyphicon-copyright-mark', 'url' => ['/index']],
+                    /* 
+                    //Drop Down Manu
                     ['label' => 'จัดการข้อมูลนักวิจัย',
                                 'icon' => 'glyphicon glyphicon-registration-mark',
-                                'url' => '#',
+                                'url' => ['rs-info/index'],
                                 'items' => [
-                                    ['label' => 'เพิ่มข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-plus', 'url' => '#',],
-                                    ['label' => 'ค้นหานักวิจัย', 'icon' => 'glyphicon glyphicon-search', 'url' => '#',],
-                                    ['label' => 'แก้ไขข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-pencil', 'url' => '#',],
-                                    ['label' => 'ลบข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-minus', 'url' => '#',],
+                                    ['label' => 'เพิ่มข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-plus', 'url' => ['rs-info/index']],
+                                    ['label' => 'ค้นหานักวิจัย', 'icon' => 'glyphicon glyphicon-search', 'url' => ['#']],
+                                    ['label' => 'แก้ไขข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-pencil', 'url' => ['#']],
+                                    ['label' => 'ลบข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-minus', 'url' => ['#']],
                        ],
                     ],
                     //////////////////////////
@@ -48,10 +56,10 @@
                                 'icon' => 'glyphicon glyphicon-book',
                                 'url' => '#',
                                 'items' => [
-                                    ['label' => 'เพิ่มโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                                    ['label' => 'ค้นหาโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                                    ['label' => 'แก้ไขข้อมูลโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => '#',],
-                                    ['label' => 'ลบข้อมูลโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => '#',],
+                                    ['label' => 'เพิ่มโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => ['rs-research/index']],
+                                    ['label' => 'ค้นหาโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => ['#']],
+                                    ['label' => 'แก้ไขข้อมูลโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => ['#']],
+                                    ['label' => 'ลบข้อมูลโครงการวิจัย', 'icon' => 'fa fa-circle-o', 'url' => ['#']],
                        ],
                     ],
                     //////////////////////////
@@ -59,7 +67,7 @@
                                 'icon' => 'glyphicon glyphicon-tags',
                                 'url' => '#',
                                 'items' => [
-                                    ['label' => 'เพิ่มข้อมูล Proposal', 'icon' => 'fa fa-circle-o', 'url' => '#',],
+                                    ['label' => 'เพิ่มข้อมูล Proposal', 'icon' => 'fa fa-circle-o', 'url' => ['rs-proposal/index']],
                                     ['label' => 'ค้นหา Proposal', 'icon' => 'fa fa-circle-o', 'url' => '#',],
                                     ['label' => 'แก้ไข Proposal', 'icon' => 'fa fa-circle-o', 'url' => '#',],
                                     ['label' => 'ลบ Proposal', 'icon' => 'fa fa-circle-o', 'url' => '#',],
@@ -99,6 +107,8 @@
                        ],
                     ],                    
                     //////////////////////////
+                    
+                     */
                     ['label' => 'รายงานการเบิกจ่าย $',
                                 'icon' => 'glyphicon glyphicon-usd',
                                 'url' => '#',
