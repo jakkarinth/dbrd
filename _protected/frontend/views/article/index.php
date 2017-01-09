@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Articles');
 <div class="article-index">
 
     <h1><?= Html::encode($this->title) ?> 
-        <span class="small"> - <?= Yii::t('app', 'The best news available') ?></span> 
+        <span class="small">  <?= Yii::t('app', '') ?></span> 
     </h1>
 
     <hr class="top">
@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Articles');
     <?= ListView::widget([
         'summary' => false,
         'dataProvider' => $dataProvider,
-        'emptyText' => Yii::t('app', 'We haven\'t created any articles yet.'),
+        'emptyText' => Yii::t('app', ''),
         'itemOptions' => ['class' => 'item'],
         'itemView' => function ($model, $key, $index, $widget) {
             return $this->render('_index', ['model' => $model]);

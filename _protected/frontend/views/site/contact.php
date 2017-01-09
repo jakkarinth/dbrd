@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="col-lg-5 well bs-component">
 
         <p>
-            <?= Yii::t('app', 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'); ?>
+            <?= Yii::t('app', ''); ?>
         </p>
 
         <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>

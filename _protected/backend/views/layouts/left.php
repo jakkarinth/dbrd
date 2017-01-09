@@ -32,13 +32,16 @@
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                     ['label' => 'เมนูหลัก', 'options' => ['class' => 'header']],
-                    ['label' => 'จัดการสิทธิ์ User', 'icon' => 'glyphicon glyphicon-user', 'url' => ['user/index']],
-                    ['label' => 'จัดการข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-registration-mark', 'url' => ['rs-info/index']],
-                    ['label' => 'จัดการข้อมูลโครงการวิจัย', 'icon' => 'glyphicon glyphicon-book', 'url' => ['rs-research/index']],
-                    ['label' => 'จัดการข้อมูลข้อเสนอโครงการ', 'icon' => 'glyphicon glyphicon-tags', 'url' => ['rs-proposal/index']],
-                    ['label' => 'จัดการข้อมูลการตีพิมพ์', 'icon' => 'glyphicon glyphicon-print', 'url' => ['/index']],
-                    ['label' => 'จัดการข้อมูลสิ่งประดิษฐ์', 'icon' => 'glyphicon glyphicon-wrench', 'url' => ['/index']],
-                    ['label' => 'จัดการ Copyright', 'icon' => 'glyphicon glyphicon-copyright-mark', 'url' => ['/index']],
+                    ['label' => 'ข้อมูลนักวิจัย', 'icon' => 'glyphicon glyphicon-registration-mark', 'url' => ['rs-info/index']],
+                    ['label' => 'ข้อมูลโครงการวิจัย', 'icon' => 'glyphicon glyphicon-book', 'url' => ['rs-research/index']],
+                    ['label' => 'ข้อเสนอโครงการ', 'icon' => 'glyphicon glyphicon-tags', 'url' => ['rs-proposal/index']],
+                    ['label' => 'ข้อมูลการตีพิมพ์', 'icon' => 'glyphicon glyphicon-print', 'url' => ['rs-journal/index']],
+                    ['label' => 'งานวิจัยที่นำไปใช้ประโยชน์', 'icon' => 'glyphicon glyphicon-print', 'url' => ['rs-use/index']],
+                    ['label' => 'สิทธิบัตร', 'icon' => 'glyphicon glyphicon-copyright-mark', 'url' => ['rs-patent/index']],
+                    ['label' => 'อนุสิทธิบัตร', 'icon' => 'glyphicon glyphicon-copyright-mark', 'url' => ['rs-patents/index']],
+                    ['label' => 'ความลับทางการค้า', 'icon' => 'glyphicon glyphicon-copyright-mark', 'url' => ['rs-secret/index']],
+                    ['label' => 'ลิขสิทธิ์', 'icon' => 'glyphicon glyphicon-copyright-mark', 'url' => ['rs-copyright/index']],
+                    ['label' => 'ผู้ใช้งานระบบ', 'icon' => 'glyphicon glyphicon-user', 'url' => ['user/index']],
                     /* 
                     //Drop Down Manu
                     ['label' => 'จัดการข้อมูลนักวิจัย',
@@ -123,6 +126,9 @@
                                     ['label' => 'ปีงบประมาณ 2553', 'icon' => 'glyphicon glyphicon-print', 'url' => '#',],
                                     ['label' => 'ปีงบประมาณ 2552', 'icon' => 'glyphicon glyphicon-print', 'url' => '#',],
                                     ['label' => 'ปีงบประมาณ 2551', 'icon' => 'glyphicon glyphicon-print', 'url' => '#',],
+                                    ['label' => 'ปีงบประมาณ 2550', 'icon' => 'glyphicon glyphicon-print', 'url' => '#',],
+                                    ['label' => 'ปีงบประมาณ 2549', 'icon' => 'glyphicon glyphicon-print', 'url' => '#',],
+                                    ['label' => 'ปีงบประมาณ 2548', 'icon' => 'glyphicon glyphicon-print', 'url' => '#',],
                                     
                        ],
                     ],  

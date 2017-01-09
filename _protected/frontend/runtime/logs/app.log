@@ -1,0 +1,180 @@
+2017-01-06 08:44:21 [::1][-][5aa96oedhk6rsgd952fd10onl3][error][yii\base\ErrorException:256] exception 'yii\base\ErrorException' with message 'Error: Attribute name must contain word characters only.' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\ErrorHandler.php:299
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(256, 'Error: Attribut...', 'C:\\xampp\\htdocs...', 299, Array)
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\ErrorHandler.php(299): trigger_error('Error: Attribut...', 256)
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\widgets\ActiveField.php(167): yii\base\ErrorHandler::convertExceptionToError(Object(yii\base\InvalidParamException))
+#3 C:\xampp\htdocs\dbrd\_protected\frontend\views\site\contact.php(25): yii\widgets\ActiveField->__toString()
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('contact', Array, Object(frontend\controllers\SiteController))
+#8 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(128): yii\base\Controller->render('contact', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionContact()
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('contact', Array)
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/contact', Array)
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#16 {main}
+2017-01-06 08:44:21 [::1][-][5aa96oedhk6rsgd952fd10onl3][info][application] $_COOKIE = [
+    '_identity' => 'c73fd58b113d00f1c27628229a28333b377e88c053de90dede535a0a7f15c726a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"lU-NPaUsTwKdsFiKh_ba-Sj-IsKQTLEG\",2592000]\";}'
+    '_csrf-backend' => '4bc58c4157d39bd2fe51ae98a65299b434263f56e59e0f2f519ffa4b16b099ada:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"IFsvQeq4EFggJRW05c4N1DSkgTtdh969\";}'
+    'advanced-frontend' => 'ro5sjkua1mhio05fl676e8en07'
+    '_csrf-frontend' => '60f0f1dc21b31ebbd15ff414a9f0281aef66b855a7c45c5c3109040cbebe9b63a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"3c_Fboxtn9GuiMEZCpGvmLOsb0X3lArS\";}'
+    'advanced-backend' => 'tc5pi7bjsot93op4pgglq2ee63'
+    '_identity-backend' => '7d71d89616207e457516a4c793c25002fd0758cfe5a0b187ec3f881be1fb7658a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"t0nZXMZ-OZ1gvxKda4NEB_ZLkBFZERig\",2592000]\";}'
+    'PHPSESSID' => '5aa96oedhk6rsgd952fd10onl3'
+    '_csrf' => 'cbbe844cfaf7c8055447e0b7042f2bcef9425071632f929a46e32d7a7f479ec0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XRH_jBcKmusLMoiafSB5oddQ5eEMcyYL\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'coygpar'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/dbrd/site/about'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'th'
+    'HTTP_COOKIE' => '_identity=c73fd58b113d00f1c27628229a28333b377e88c053de90dede535a0a7f15c726a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22lU-NPaUsTwKdsFiKh_ba-Sj-IsKQTLEG%22%2C2592000%5D%22%3B%7D; _csrf-backend=4bc58c4157d39bd2fe51ae98a65299b434263f56e59e0f2f519ffa4b16b099ada%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22IFsvQeq4EFggJRW05c4N1DSkgTtdh969%22%3B%7D; advanced-frontend=ro5sjkua1mhio05fl676e8en07; _csrf-frontend=60f0f1dc21b31ebbd15ff414a9f0281aef66b855a7c45c5c3109040cbebe9b63a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223c_Fboxtn9GuiMEZCpGvmLOsb0X3lArS%22%3B%7D; advanced-backend=tc5pi7bjsot93op4pgglq2ee63; _identity-backend=7d71d89616207e457516a4c793c25002fd0758cfe5a0b187ec3f881be1fb7658a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22t0nZXMZ-OZ1gvxKda4NEB_ZLkBFZERig%22%2C2592000%5D%22%3B%7D; PHPSESSID=5aa96oedhk6rsgd952fd10onl3; _csrf=cbbe844cfaf7c8055447e0b7042f2bcef9425071632f929a46e32d7a7f479ec0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XRH_jBcKmusLMoiafSB5oddQ5eEMcyYL%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Ampps\\php-5.6;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\ieeds\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Docker Toolbox'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/dbrd/index.php'
+    'REMOTE_PORT' => '55953'
+    'REDIRECT_URL' => 'http://localhost/dbrd/site/contact'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dbrd/site/contact'
+    'SCRIPT_NAME' => '/dbrd/index.php'
+    'PHP_SELF' => '/dbrd/index.php'
+    'REQUEST_TIME_FLOAT' => 1483688661.437
+    'REQUEST_TIME' => 1483688661
+]
+2017-01-06 08:44:23 [::1][-][5aa96oedhk6rsgd952fd10onl3][error][yii\base\ErrorException:256] exception 'yii\base\ErrorException' with message 'Error: Attribute name must contain word characters only.' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\ErrorHandler.php:299
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(256, 'Error: Attribut...', 'C:\\xampp\\htdocs...', 299, Array)
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\ErrorHandler.php(299): trigger_error('Error: Attribut...', 256)
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\widgets\ActiveField.php(167): yii\base\ErrorHandler::convertExceptionToError(Object(yii\base\InvalidParamException))
+#3 C:\xampp\htdocs\dbrd\_protected\frontend\views\site\contact.php(25): yii\widgets\ActiveField->__toString()
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('contact', Array, Object(frontend\controllers\SiteController))
+#8 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(128): yii\base\Controller->render('contact', Array)
+#9 [internal function]: frontend\controllers\SiteController->actionContact()
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('contact', Array)
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/contact', Array)
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#16 {main}
+2017-01-06 08:44:23 [::1][-][5aa96oedhk6rsgd952fd10onl3][info][application] $_COOKIE = [
+    '_identity' => 'c73fd58b113d00f1c27628229a28333b377e88c053de90dede535a0a7f15c726a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"lU-NPaUsTwKdsFiKh_ba-Sj-IsKQTLEG\",2592000]\";}'
+    '_csrf-backend' => '4bc58c4157d39bd2fe51ae98a65299b434263f56e59e0f2f519ffa4b16b099ada:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"IFsvQeq4EFggJRW05c4N1DSkgTtdh969\";}'
+    'advanced-frontend' => 'ro5sjkua1mhio05fl676e8en07'
+    '_csrf-frontend' => '60f0f1dc21b31ebbd15ff414a9f0281aef66b855a7c45c5c3109040cbebe9b63a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"3c_Fboxtn9GuiMEZCpGvmLOsb0X3lArS\";}'
+    'advanced-backend' => 'tc5pi7bjsot93op4pgglq2ee63'
+    '_identity-backend' => '7d71d89616207e457516a4c793c25002fd0758cfe5a0b187ec3f881be1fb7658a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"t0nZXMZ-OZ1gvxKda4NEB_ZLkBFZERig\",2592000]\";}'
+    'PHPSESSID' => '5aa96oedhk6rsgd952fd10onl3'
+    '_csrf' => 'cbbe844cfaf7c8055447e0b7042f2bcef9425071632f929a46e32d7a7f479ec0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XRH_jBcKmusLMoiafSB5oddQ5eEMcyYL\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'coygpar'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/dbrd/site/about'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'th'
+    'HTTP_COOKIE' => '_identity=c73fd58b113d00f1c27628229a28333b377e88c053de90dede535a0a7f15c726a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22lU-NPaUsTwKdsFiKh_ba-Sj-IsKQTLEG%22%2C2592000%5D%22%3B%7D; _csrf-backend=4bc58c4157d39bd2fe51ae98a65299b434263f56e59e0f2f519ffa4b16b099ada%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22IFsvQeq4EFggJRW05c4N1DSkgTtdh969%22%3B%7D; advanced-frontend=ro5sjkua1mhio05fl676e8en07; _csrf-frontend=60f0f1dc21b31ebbd15ff414a9f0281aef66b855a7c45c5c3109040cbebe9b63a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%223c_Fboxtn9GuiMEZCpGvmLOsb0X3lArS%22%3B%7D; advanced-backend=tc5pi7bjsot93op4pgglq2ee63; _identity-backend=7d71d89616207e457516a4c793c25002fd0758cfe5a0b187ec3f881be1fb7658a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22t0nZXMZ-OZ1gvxKda4NEB_ZLkBFZERig%22%2C2592000%5D%22%3B%7D; PHPSESSID=5aa96oedhk6rsgd952fd10onl3; _csrf=cbbe844cfaf7c8055447e0b7042f2bcef9425071632f929a46e32d7a7f479ec0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XRH_jBcKmusLMoiafSB5oddQ5eEMcyYL%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Ampps\\php-5.6;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\ieeds\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Docker Toolbox'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/dbrd/index.php'
+    'REMOTE_PORT' => '55956'
+    'REDIRECT_URL' => 'http://localhost/dbrd/site/contact'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dbrd/site/contact'
+    'SCRIPT_NAME' => '/dbrd/index.php'
+    'PHP_SELF' => '/dbrd/index.php'
+    'REQUEST_TIME_FLOAT' => 1483688663.771
+    'REQUEST_TIME' => 1483688663
+]
