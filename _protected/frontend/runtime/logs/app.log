@@ -178,3 +178,491 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1483688663.771
     'REQUEST_TIME' => 1483688663
 ]
+2017-01-09 07:55:33 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#9 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#16 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#18 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#21 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#22 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#23 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#24 [internal function]: frontend\controllers\SiteController->actionIndex()
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#28 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/index', Array)
+#29 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#11 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#16 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#21 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#22 [internal function]: frontend\controllers\SiteController->actionIndex()
+#23 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#24 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('index', Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('site/index', Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2017-01-09 07:55:33 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4h2PadS23Uhh4ODb6CHhscG0NaBHC5UL\";}'
+    'PHPSESSID' => 'cg64mc0a1ihkei315fdhf0ul14'
+    '_identity' => '0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"tMreESm4k4JccFQIZFyyO0gHHEptgzgE\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/dbrd/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'th'
+    'HTTP_COOKIE' => '_csrf=41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224h2PadS23Uhh4ODb6CHhscG0NaBHC5UL%22%3B%7D; PHPSESSID=cg64mc0a1ihkei315fdhf0ul14; _identity=0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tMreESm4k4JccFQIZFyyO0gHHEptgzgE%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Ampps\\php-5.6;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\ieeds\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Docker Toolbox'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/dbrd/index.php'
+    'REMOTE_PORT' => '57788'
+    'REDIRECT_URL' => 'http://localhost/dbrd/site/index'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dbrd/site/index'
+    'SCRIPT_NAME' => '/dbrd/index.php'
+    'PHP_SELF' => '/dbrd/index.php'
+    'REQUEST_TIME_FLOAT' => 1483944933.086
+    'REQUEST_TIME' => 1483944933
+]
+2017-01-09 07:55:42 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#9 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#16 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#18 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#21 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#22 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#23 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#24 [internal function]: frontend\controllers\SiteController->actionIndex()
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#28 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#29 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#11 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#16 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#21 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#22 [internal function]: frontend\controllers\SiteController->actionIndex()
+#23 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#24 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2017-01-09 07:55:42 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4h2PadS23Uhh4ODb6CHhscG0NaBHC5UL\";}'
+    'PHPSESSID' => 'cg64mc0a1ihkei315fdhf0ul14'
+    '_identity' => '0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"tMreESm4k4JccFQIZFyyO0gHHEptgzgE\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/dbrd/site/index'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'th'
+    'HTTP_COOKIE' => '_csrf=41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224h2PadS23Uhh4ODb6CHhscG0NaBHC5UL%22%3B%7D; PHPSESSID=cg64mc0a1ihkei315fdhf0ul14; _identity=0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tMreESm4k4JccFQIZFyyO0gHHEptgzgE%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Ampps\\php-5.6;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\ieeds\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Docker Toolbox'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/dbrd/index.php'
+    'REMOTE_PORT' => '57793'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dbrd/'
+    'SCRIPT_NAME' => '/dbrd/index.php'
+    'PHP_SELF' => '/dbrd/index.php'
+    'REQUEST_TIME_FLOAT' => 1483944942.753
+    'REQUEST_TIME' => 1483944942
+]
+2017-01-09 07:55:43 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#9 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#16 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#18 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#21 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#22 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#23 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#24 [internal function]: frontend\controllers\SiteController->actionIndex()
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#28 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#29 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#11 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#16 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#21 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#22 [internal function]: frontend\controllers\SiteController->actionIndex()
+#23 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#24 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2017-01-09 07:55:43 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4h2PadS23Uhh4ODb6CHhscG0NaBHC5UL\";}'
+    'PHPSESSID' => 'cg64mc0a1ihkei315fdhf0ul14'
+    '_identity' => '0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"tMreESm4k4JccFQIZFyyO0gHHEptgzgE\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/dbrd/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'th'
+    'HTTP_COOKIE' => '_csrf=41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224h2PadS23Uhh4ODb6CHhscG0NaBHC5UL%22%3B%7D; PHPSESSID=cg64mc0a1ihkei315fdhf0ul14; _identity=0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tMreESm4k4JccFQIZFyyO0gHHEptgzgE%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Ampps\\php-5.6;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\ieeds\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Docker Toolbox'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/dbrd/index.php'
+    'REMOTE_PORT' => '57797'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dbrd/'
+    'SCRIPT_NAME' => '/dbrd/index.php'
+    'PHP_SELF' => '/dbrd/index.php'
+    'REQUEST_TIME_FLOAT' => 1483944943.88
+    'REQUEST_TIME' => 1483944943
+]
+2017-01-09 07:55:44 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#9 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#11 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#16 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#18 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#21 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#22 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#23 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#24 [internal function]: frontend\controllers\SiteController->actionIndex()
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#28 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#29 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Connection.php(760): yii\db\Schema->quoteValue('cg64mc0a1ihkei3...')
+#4 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('cg64mc0a1ihkei3...')
+#5 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\db\Query.php(260): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\DbSession.php(147): yii\db\Query->scalar(Object(yii\db\Connection))
+#9 [internal function]: yii\web\DbSession->readSession('cg64mc0a1ihkei3...')
+#10 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(131): session_start()
+#11 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Session.php(564): yii\web\Session->open()
+#12 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(658): yii\web\Session->get('__id')
+#13 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(188): yii\web\User->renewAuthStatus()
+#14 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(350): yii\web\User->getIdentity()
+#15 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\User.php(714): yii\web\User->getId()
+#16 C:\xampp\htdocs\dbrd\_protected\frontend\views\layouts\main.php(40): yii\web\User->can('editor')
+#17 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#18 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#19 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(393): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#20 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(379): yii\base\Controller->renderContent('<div class="sit...')
+#21 C:\xampp\htdocs\dbrd\_protected\frontend\controllers\SiteController.php(89): yii\base\Controller->render('index')
+#22 [internal function]: frontend\controllers\SiteController->actionIndex()
+#23 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#24 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#25 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#26 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('', Array)
+#27 C:\xampp\htdocs\dbrd\_protected\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 C:\xampp\htdocs\dbrd\index.php(18): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2017-01-09 07:55:44 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4h2PadS23Uhh4ODb6CHhscG0NaBHC5UL\";}'
+    'PHPSESSID' => 'cg64mc0a1ihkei315fdhf0ul14'
+    '_identity' => '0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"tMreESm4k4JccFQIZFyyO0gHHEptgzgE\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/dbrd/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'th'
+    'HTTP_COOKIE' => '_csrf=41811cd81bba8fd27ef865eda6b885641f8d23e7c683d8adc5e92fa1a5ee688aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224h2PadS23Uhh4ODb6CHhscG0NaBHC5UL%22%3B%7D; PHPSESSID=cg64mc0a1ihkei315fdhf0ul14; _identity=0775298b1844aa5413c4ae987747cec188fc2ae163e7e5abc4bd8ebafcadce56a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22tMreESm4k4JccFQIZFyyO0gHHEptgzgE%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Ampps\\php-5.6;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\Users\\ieeds\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Program Files\\Docker Toolbox'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.20'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/dbrd/index.php'
+    'REMOTE_PORT' => '57801'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/dbrd/'
+    'SCRIPT_NAME' => '/dbrd/index.php'
+    'PHP_SELF' => '/dbrd/index.php'
+    'REQUEST_TIME_FLOAT' => 1483944944.64
+    'REQUEST_TIME' => 1483944944
+]

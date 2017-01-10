@@ -116,10 +116,8 @@ class RsInfo extends \yii\db\ActiveRecord
             'r_Beducation' => 'การศึกษา (ป.ตรี)',
             'r_experience' => 'ประสบการณ์',
             'r_expert' => 'ความเชี่ยวชาญ',
-            'r_type' => '1=สายวิชาการ
-0=สายสนับสนุน',
-            'r_status' => '1=ภายใน
-0=ภายนอก',
+            'r_type' => 'สายวิชาการ/สายสนับสนุน',
+            'r_status' => 'ประเภคบุคลากร',
         ];
     }
 

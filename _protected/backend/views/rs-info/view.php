@@ -2,24 +2,27 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use backend\models\RefDepartment;
+use backend\models\RefFac;
+use backend\models\RefUniv;
+
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\RsInfo */
 
-$this->title = $model->rid;
+$this->title = 'รายละเอียดข้อมูลนักวิจัย ID : '.$model->rid;
 $this->params['breadcrumbs'][] = ['label' => 'Rs Infos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rs-info-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->rid], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->rid], [
+        <?= Html::a('แก้ไข', ['update', 'id' => $model->rid], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('ลบ', ['delete', 'id' => $model->rid], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'คุณแน่ใจหรือไม่ว่าต้องการลบข้อมูลนักวิจัยท่านนี้',
                 'method' => 'post',
             ],
         ]) ?>
