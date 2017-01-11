@@ -1,0 +1,13 @@
+á¡éä¢ÃËÑÊ¼èÒ¹
+_protected\common\config
+á¡éä¿Åì main-local.php
+
+'class' => 'yii\db\Connection',
+           
+'dsn' => 'mysql:host=localhost;dbname=dbrd',
+           
+'username' => 'rad_db',
+            
+'password' => 'rad_mysql_ac',
+            
+'charset' => 'utf8',
