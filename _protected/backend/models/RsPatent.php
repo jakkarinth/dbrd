@@ -45,7 +45,7 @@ class RsPatent extends \yii\db\ActiveRecord
             [['a_start', 'a_date', 'a_end'], 'safe'],
             [['a_aname'], 'string', 'max' => 300],
             [['a_num'], 'string', 'max' => 10],
-            [['a number'], 'string', 'max' => 5],
+            [['a_number'], 'string', 'max' => 5],
             [['a_status'], 'string', 'max' => 1],
             [['ref_p', 'ref_ai', 'withs'], 'string', 'max' => 100],
             [['rid'], 'exist', 'skipOnError' => true, 'targetClass' => RsInfo::className(), 'targetAttribute' => ['rid' => 'rid']],
@@ -60,12 +60,10 @@ class RsPatent extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ลำดับที่',
-            'a_aname' => 'ชื่อผลงานที่ขอจดอนุสิทธิบัตร
-',
+            'a_aname' => 'ชื่อผลงานที่ขอจดอนุสิทธิบัตร',
             'rsid' => 'รหัสงานวิจัย',
             'rid' => 'รหัสนักวิจัย',
-            'a_num' => 'เลขที่คำขออนุสิทธิบัตร
-',
+            'a_num' => 'เลขที่คำขออนุสิทธิบัตร',
             'a_number' => 'เลขที่อนุสิทธิบัตร',
             'a_start' => 'วันที่ยื่นคำขอ',
             'a_date' => 'วันที่ได้รับอนุสิทธิบัตร',
