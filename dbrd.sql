@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2017 at 08:43 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: May 11, 2017 at 09:32 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -109,19 +109,19 @@ CREATE TABLE `auth_item_child` (
 --
 
 INSERT INTO `auth_item_child` (`parent`, `child`) VALUES
+('theCreator', 'admin'),
+('editor', 'adminArticle'),
+('editor', 'createArticle'),
 ('admin', 'deleteArticle'),
 ('admin', 'editor'),
 ('admin', 'manageUsers'),
-('admin', 'updateArticle'),
-('editor', 'adminArticle'),
-('editor', 'createArticle'),
-('editor', 'support'),
-('editor', 'updateOwnArticle'),
-('premium', 'usePremiumContent'),
 ('support', 'member'),
 ('support', 'premium'),
-('theCreator', 'admin'),
-('updateOwnArticle', 'updateArticle');
+('editor', 'support'),
+('admin', 'updateArticle'),
+('updateOwnArticle', 'updateArticle'),
+('editor', 'updateOwnArticle'),
+('premium', 'usePremiumContent');
 
 -- --------------------------------------------------------
 
@@ -176,6 +176,14 @@ CREATE TABLE `ref_budget` (
   `budget` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ฐานข้อมูลงบประมาณ';
 
+--
+-- Dumping data for table `ref_budget`
+--
+
+INSERT INTO `ref_budget` (`budget_id`, `budget`) VALUES
+(0, 'รายจ่าย(งบแผ่นดิน)'),
+(1, 'รายได้(งบหน่วยงาน)');
+
 -- --------------------------------------------------------
 
 --
@@ -188,6 +196,31 @@ CREATE TABLE `ref_department` (
   `fac_id` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ตารางอ้างอิง rs_research';
 
+--
+-- Dumping data for table `ref_department`
+--
+
+INSERT INTO `ref_department` (`r_dept_id`, `dept_name`, `fac_id`) VALUES
+(1, 'สาขาวิชาสัตวศาสตร์', 1),
+(2, 'สาขาวิชาพืชศาสตร์', 1),
+(3, 'สาขาวิชาประมง', 1),
+(4, 'สาขาวิชาอุตสาหกรรมเกษตร', 1),
+(5, 'สาขาวิชาจักรกลเกษตร', 1),
+(6, 'สาขาวิชาเทคโนโลยีไฟฟ้า', 1),
+(7, 'สาขาวิชาวิศวกรรมเครื่องกล', 1),
+(8, 'สาขาวิชาเทคโนโลยีคอมพิวเตอร์', 1),
+(9, 'สาขาวิชาเทคโนโลยีภูมิทัศน์', 1),
+(10, 'สาขาวิชาวิทยาศาสตร์และคณิตศาสตร์', 1),
+(11, 'สาขาวิชาสิ่งทอและการออกแบบ', 1),
+(12, 'สาขาวิชาการจัดการ', 2),
+(13, 'สาขาวิชาการบัญชี', 2),
+(14, 'สาขาวิชาระบบสารสนเทศ', 2),
+(15, 'สาขาวิชาการตลาด', 2),
+(16, 'สาขาวิชาภาษาศาสตร์', 2),
+(17, 'สาขาวิชาการท่องเที่ยวและการโรงแรม', 2),
+(18, 'สาขาวิชามนุษยศาสตร์และสังคมศาสตร์', 2),
+(19, 'สาขาวิชาเทคโนโลยีมัลติมีเดีย', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -199,6 +232,14 @@ CREATE TABLE `ref_fac` (
   `fac_name` varchar(255) DEFAULT NULL,
   `cam_id` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ref_fac`
+--
+
+INSERT INTO `ref_fac` (`r_fac_id`, `fac_name`, `cam_id`) VALUES
+(1, 'คณะเกษตรศาสตร์และเทคโนโลยี', 2),
+(2, 'คณะเทคโนโลยีการจัดการ', 2);
 
 -- --------------------------------------------------------
 
@@ -243,6 +284,16 @@ CREATE TABLE `ref_univ` (
   `r_cmp_id` int(4) NOT NULL,
   `cam_name` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ฐานข้อมูลมหาวิทยาลัย ';
+
+--
+-- Dumping data for table `ref_univ`
+--
+
+INSERT INTO `ref_univ` (`r_cmp_id`, `cam_name`) VALUES
+(1, 'นครราชสีมา'),
+(2, 'สุรินทร์'),
+(3, 'ขอนแก่น'),
+(4, 'สกลนคร');
 
 -- --------------------------------------------------------
 
@@ -329,6 +380,14 @@ CREATE TABLE `rs_fac_research` (
   `fname` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='สาขางานวิจัย';
 
+--
+-- Dumping data for table `rs_fac_research`
+--
+
+INSERT INTO `rs_fac_research` (`frid`, `fname`) VALUES
+(1, 'การวิจัยพื้นฐาน (Basic research)'),
+(2, 'การวิจัยประยุกต์ (Applied research)');
+
 -- --------------------------------------------------------
 
 --
@@ -366,9 +425,20 @@ CREATE TABLE `rs_info` (
   `r_Beducation` text COMMENT 'การศึกษา (ป.ตรี)',
   `r_experience` text COMMENT 'ประสบการณ์',
   `r_expert` text COMMENT 'ความเชี่ยวชาญ',
-  `r_type` int(1) DEFAULT NULL COMMENT '1=สายวิชาการ\n0=สายสนับสนุน',
-  `r_status` int(1) DEFAULT NULL COMMENT '1=ภายใน\n0=ภายนอก'
+  `r_type` int(1) DEFAULT NULL COMMENT '1=สายวิชาการ0=สายสนับสนุน',
+  `r_status` int(1) DEFAULT NULL COMMENT '1=ภายใน0=ภายนอก'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ฐานข้อมูลนักวิจัย\n';
+
+--
+-- Dumping data for table `rs_info`
+--
+
+INSERT INTO `rs_info` (`rid`, `r_num`, `r_fname_en`, `r_lname_en`, `r_lname_th`, `f_lname_th`, `r_date`, `r_month`, `r_yaer`, `r_personal`, `r_picture`, `r_address`, `r_city`, `r_province`, `r_postal`, `r_tel`, `r_fax`, `r_mobile`, `r_email`, `r_nrct`, `r_position`, `r_administ`, `r_dept_id`, `r_fac_id`, `r_cmp_id`, `r_Aeducation`, `r_Meducation`, `r_Beducation`, `r_experience`, `r_expert`, `r_type`, `r_status`) VALUES
+(1, '', '', '', 'สุทธิศักดิ์ ', 'แก้วแกมจันทร์', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, 2, '', '', '', '', '- โภชนะศาสตร์สัตว์เคี้ยวเอื้อง โดยเฉพาะอาหารโคนม\r\n - น้ำนมและผลิตภัณฑ์นม\r\n- การอนุรักษ์และจัดการช้าง', 1, 1),
+(2, '2', '', '', 'ปรมาพร ', 'อ่อนจันทร์', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', 14, 2, 2, '', '', '', '', '- บริหารธุรกิจ - ระบบสารสนเทศ', 1, 1),
+(3, '3', '', '', 'ภรณี ', 'หลาวทอง', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', 12, 2, 2, '', '', '', '', '- การจัดการ, การจัดการวิสาหกิจขนาดกลางและขนาดย่อม - บริหารธุรกิจ', NULL, NULL),
+(4, '4', '', '', 'โกเมท ', 'จันทรสมโภชน์', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', 18, 2, 2, '', '', '', '', '- ศิลปกรรม, เทคโนโลยีการศึกษา, ศึกษาศาสตร์', 1, 1),
+(5, '5', '', '', 'สรชัย ', 'สุขพันธ์', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '', 14, 2, 2, '', '', '', '', '- คอมพิวเตอร์, สารสนเทศ', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -439,7 +509,7 @@ CREATE TABLE `rs_patent` (
   `rsid` int(10) NOT NULL COMMENT 'รหัสงานวิจัย',
   `rid` int(4) NOT NULL COMMENT 'รหัสนักวิจัย',
   `a_num` char(10) DEFAULT NULL COMMENT 'เลขที่คำขออนุสิทธิบัตร\n',
-  `a number` char(5) DEFAULT NULL COMMENT 'เลขที่อนุสิทธิบัตร',
+  `a_number` char(5) DEFAULT NULL COMMENT 'เลขที่อนุสิทธิบัตร',
   `a_start` date DEFAULT NULL COMMENT 'วันที่ยื่นคำขอ',
   `a_date` date DEFAULT NULL COMMENT 'วันที่ได้รับอนุสิทธิบัตร',
   `a_end` date DEFAULT NULL COMMENT 'วันที่หมดอายุของอนุสิทธิบัตร',
@@ -461,7 +531,7 @@ CREATE TABLE `rs_patents` (
   `rsid` int(10) NOT NULL COMMENT 'รหัสงานวิจัย',
   `rid` int(4) NOT NULL COMMENT 'รหัสนักวิจัย',
   `a_num` char(10) DEFAULT NULL COMMENT 'เลขที่คำขออนุสิทธิบัตร\n',
-  `a number` char(5) DEFAULT NULL COMMENT 'เลขที่อนุสิทธิบัตร',
+  `a_number` char(5) DEFAULT NULL COMMENT 'เลขที่อนุสิทธิบัตร',
   `a_start` date DEFAULT NULL COMMENT 'วันที่ยื่นคำขอ',
   `a_date` date DEFAULT NULL COMMENT 'วันที่ได้รับอนุสิทธิบัตร',
   `a_end` date DEFAULT NULL COMMENT 'วันที่หมดอายุของอนุสิทธิบัตร',
@@ -561,6 +631,13 @@ CREATE TABLE `rs_research` (
   `rs_dbook` date DEFAULT NULL COMMENT 'วันที่ส่งวิจัยฉบับสมบูรณ์'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ฐานข้อมูลงานวิจัย';
 
+--
+-- Dumping data for table `rs_research`
+--
+
+INSERT INTO `rs_research` (`rsid`, `rs_name`, `rs_name_en`, `rs_leader`, `rs_team`, `rs_fiscal`, `budget_id`, `rs_abstract_en`, `rs_abstract_th`, `rs_campus`, `rs_capital`, `rs_class`, `rs_pay1`, `rs_pay2`, `rs_pay3`, `rs_bank`, `frid`, `rs_start`, `rs_end`, `rs_time`, `rs_type`, `rs_status`, `rs_note`, `rs_statxt`, `rs_final`, `subject_id`, `project_id`, `rs_year`, `rs_atyear`, `pro_group`, `rs_nguat1`, `rs_nguat2`, `rs_nguat3`, `rs_kaona`, `rs_knowleadge`, `rs_book`, `rs_isbn`, `rs_sum`, `rs_cd`, `rs_dbook`) VALUES
+(1, 'ปปปป', '', 'จักรินทร์ ', 'หกดหก กหดห', '', 0, '', '', '', '', '0', NULL, NULL, NULL, '', 2, NULL, NULL, NULL, '', '', '', '', NULL, 1, NULL, '', '', '', NULL, NULL, NULL, '', '', '', '', '', '', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -591,6 +668,14 @@ CREATE TABLE `rs_subject` (
   `subject_id` int(1) NOT NULL,
   `subject_name` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ฐานข้อมูลกลุ่มสาขาวิชา  rs_subject';
+
+--
+-- Dumping data for table `rs_subject`
+--
+
+INSERT INTO `rs_subject` (`subject_id`, `subject_name`) VALUES
+(1, 'การวิจัยทางวิทยาศาสตร์ (Scientific research)'),
+(2, 'วิจัยทางสังคมศาสตร์ (Social research)');
 
 -- --------------------------------------------------------
 
@@ -694,16 +779,7 @@ CREATE TABLE `session` (
 --
 
 INSERT INTO `session` (`id`, `expire`, `data`) VALUES
-('2qmhiai783d3ffdubvo545e345', 1481601631, 0x5f5f666c6173687c613a303a7b7d),
-('5aa96oedhk6rsgd952fd10onl3', 1483690131, 0x5f5f666c6173687c613a303a7b7d5f5f636170746368612f736974652f636170746368617c733a373a22636f7967706172223b5f5f636170746368612f736974652f63617074636861636f756e747c693a313b),
-('7215cq4322pq1bgk2iloajmd80', 1482996162, 0x5f5f666c6173687c613a303a7b7d5f5f636170746368612f736974652f636170746368617c733a363a2268667765766f223b5f5f636170746368612f736974652f63617074636861636f756e747c693a313b5f5f72657475726e55726c7c733a31343a222f646272642f6261636b656e642f223b5f5f69647c693a323b),
-('85nejj4jqa85pfuhdmmkl2oo71', 1483926584, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a323b),
-('cg64mc0a1ihkei315fdhf0ul14', 1483947580, 0x5f5f666c6173687c613a303a7b7d5f5f636170746368612f736974652f636170746368617c733a363a2266697a636e65223b5f5f636170746368612f736974652f63617074636861636f756e747c693a313b5f5f72657475726e55726c7c733a31343a222f646272642f6261636b656e642f223b),
-('cil1uvaji82s4us860h2rpf7o6', 1476786133, 0x5f5f666c6173687c613a303a7b7d5f5f72657475726e55726c7c733a31343a222f646272642f6261636b656e642f223b5f5f69647c693a313b),
-('ggu0pcs78rtmialslu7ucc5tc6', 1481622020, 0x5f5f666c6173687c613a303a7b7d5f5f72657475726e55726c7c733a31343a222f646272642f6261636b656e642f223b5f5f69647c693a323b),
-('hrh5ps4mpnjfv2bea23ugpmr70', 1481793239, 0x5f5f666c6173687c613a303a7b7d5f5f72657475726e55726c7c733a31343a222f646272642f6261636b656e642f223b5f5f69647c693a323b),
-('j5c1ide8de1gfl8glo99olp8a7', 1481601423, 0x5f5f666c6173687c613a303a7b7d),
-('jlakanm1v4dq8av6sg4setdn84', 1476953524, 0x5f5f666c6173687c613a303a7b7d);
+('94hdfnek52hgtne8nht5rqs7g3', 1494496462, 0x5f5f666c6173687c613a303a7b7d5f5f69647c693a313b);
 
 -- --------------------------------------------------------
 
@@ -999,7 +1075,7 @@ ALTER TABLE `rs_creative`
 -- AUTO_INCREMENT for table `rs_fac_research`
 --
 ALTER TABLE `rs_fac_research`
-  MODIFY `frid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสสาขางานวิจัย';
+  MODIFY `frid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสสาขางานวิจัย', AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `rs_journal`
 --
@@ -1019,7 +1095,7 @@ ALTER TABLE `rs_patents`
 -- AUTO_INCREMENT for table `rs_research`
 --
 ALTER TABLE `rs_research`
-  MODIFY `rsid` int(10) NOT NULL AUTO_INCREMENT COMMENT 'รหัสงานวิจัย';
+  MODIFY `rsid` int(10) NOT NULL AUTO_INCREMENT COMMENT 'รหัสงานวิจัย', AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `rs_secret`
 --

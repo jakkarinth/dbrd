@@ -11,9 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Rs Researches', 'url' => ['index']
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="rs-research-view">
-
-    <h1><?= Html::encode($this->title) ?></h1>
-
+ 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->rsid], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->rsid], [

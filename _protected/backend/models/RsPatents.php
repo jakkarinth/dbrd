@@ -12,7 +12,7 @@ use Yii;
  * @property integer $rsid
  * @property integer $rid
  * @property string $a_num
- * @property string $a number
+ * @property string $a_number
  * @property string $a_start
  * @property string $a_date
  * @property string $a_end

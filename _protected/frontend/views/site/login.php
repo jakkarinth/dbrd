@@ -6,7 +6,7 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-$this->title = Yii::t('app', 'Login');
+$this->title = Yii::t('app', 'เข้าสู่ระบบ');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="col-lg-5 well bs-component">
 
-        <p><?= Yii::t('app', 'Please fill out the following fields to login:') ?></p>
+        <p><?= Yii::t('app', 'กรุณากรอกชื่อผู้ใช้งานและรหัสผ่านก่อนเข้าสู่ระบบ :') ?></p>
 
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
@@ -30,14 +30,15 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
         <div style="color:#999;margin:1em 0">
-            <?= Yii::t('app', 'If you forgot your password you can') ?>
-            <?= Html::a(Yii::t('app', 'reset it'), ['site/request-password-reset']) ?>.
+            <?= Yii::t('app', 'หากลืมรหัสผ่านคุณสามารถรีเซ็ตได้ >>>') ?>
+            <?= Html::a(Yii::t('app', 'รีเซ็ตรหัสผ่าน'), ['site/request-password-reset']) ?>.
         </div>
 
         <div class="form-group">
             <?= Html::submitButton(Yii::t('app', 'Login'), ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
+            
         </div>
-
+            <?= Html::a(Yii::t('app', 'สำหรับเจ้าเจ้าที่'), ['backend/site/login']) ?>.
         <?php ActiveForm::end(); ?>
 
     </div>

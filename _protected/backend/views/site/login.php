@@ -18,9 +18,9 @@ $fieldOptions2 = [
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
 ?>
-
 <div class="login-box">
     <div class="login-logo">
+        <img src="/dbrd/images/rmutilogo.png" width="50" height="85">
         <a href="#"><b>RMUTI:Research</b>Manager</a>
     </div>
     <!-- /.login-logo -->
@@ -63,7 +63,7 @@ $fieldOptions2 = [
         <!-- /.social-auth-links -->
 
         <a href="#">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="../../site/signup" class="text-center">Register a new membership</a>
 
     </div>
     <!-- /.login-box-body -->

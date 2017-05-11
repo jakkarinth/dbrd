@@ -19,7 +19,7 @@ class RsPatentsSearch extends RsPatents
     {
         return [
             [['id', 'rsid', 'rid'], 'integer'],
-            [['a_pname', 'a_num', 'a number', 'a_start', 'a_date', 'a_end', 'a_status', 'ref_p', 'ref_pi', 'withs'], 'safe'],
+            [['a_pname', 'a_num', 'a_number', 'a_start', 'a_date', 'a_end', 'a_status', 'ref_p', 'ref_pi', 'withs'], 'safe'],
         ];
     }
 

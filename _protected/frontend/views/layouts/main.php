@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => Yii::t('app', Yii::$app->name),
+                'brandLabel' => '<img src="images/rmutilogo.png" style="display:inline; vertical-align: top; height:26px;">  ระบบบริหารจัดการโครงการวิจัยและงานสร้างสรรค์',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-default navbar-fixed-top',
@@ -37,9 +37,9 @@ AppAsset::register($this);
             $menuItems[] = ['label' => Yii::t('app', 'หน้าแรก'), 'url' => ['/site/index']];
 
             // we do not need to display Article/index, About and Contact pages to editor+ roles
-            if (!Yii::$app->user->can('editor')) 
+            if (!Yii::$app->user->can('editor'))
             {
-                $menuItems[] = ['label' => Yii::t('app', 'บทคววม'), 'url' => ['/article/index']];
+                //$menuItems[] = ['label' => Yii::t('app', 'บทคววม'), 'url' => ['/article/index']];
                 $menuItems[] = ['label' => Yii::t('app', 'เกี่ยวกับเรา'), 'url' => ['/site/about']];
                 $menuItems[] = ['label' => Yii::t('app', 'ติดต่อเรา'), 'url' => ['/site/contact']];
             }
@@ -48,16 +48,16 @@ AppAsset::register($this);
             if (Yii::$app->user->can('editor'))
             {
                 $menuItems[] = ['label' => Yii::t('app', 'บทความ'), 'url' => ['/article/admin']];
-            }            
-            
+            }
+
             // display Signup and Login pages to guests of the site
-            if (Yii::$app->user->isGuest) 
+            if (Yii::$app->user->isGuest)
             {
                 $menuItems[] = ['label' => Yii::t('app', 'สมัครสมาชิก'), 'url' => ['/site/signup']];
                 $menuItems[] = ['label' => Yii::t('app', 'เข้าสู่ระบบ'), 'url' => ['/site/login']];
             }
             // display Logout to all logged in users
-            else 
+            else
             {
                 $menuItems[] = [
                     'label' => Yii::t('app', 'ออกจากระบบ'). ' (' . Yii::$app->user->identity->username . ')',
@@ -65,7 +65,7 @@ AppAsset::register($this);
                     'linkOptions' => ['data-method' => 'post']
                 ];
             }
-           
+
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
@@ -84,7 +84,7 @@ AppAsset::register($this);
 
     <footer class="footer">
         <div class="container">
-        <p class="pull-left"><?= Yii::t('app', Yii::$app->name) ?>   &copy; <?= date('Y') ?> พัฒนาโดย แผนกงานวิจัยและพัฒนา</p>
+            <p class="pull-left"><?= Yii::t('app', Yii::$app->name) ?>   &copy; <?= date('Y') ?> <a href="http://www.surin.rmuti.ac.th/research/">พัฒนาโดย แผนกงานวิจัยและพัฒนา</a></p>
         <p class="pull-right"><?= Yii::powered() ?></p>
         </div>
     </footer>

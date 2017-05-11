@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use yii\helpers\ArrayHelper;
 use backend\models\RefDepartment;
 use backend\models\RefFac;
 use backend\models\RefUniv;
@@ -56,6 +57,19 @@ $this->params['breadcrumbs'][] = $this->title;
             'r_dept_id',
             'r_fac_id',
             'r_cmp_id',
+            /*[ 'attribute' => 'r_dept_id', 'filter' => ArrayHelper::map(RefDepartment::find()->all(), 'r_dept_id', 'dept_name'),
+            'value' => function($model) {
+                return $model->rDept->dept_name;
+            }],
+            [ 'attribute' => 'r_fac_id', 'filter' => ArrayHelper::map(RefFac::find()->all(), 'r_fac_id', 'fac_name'),
+            'value' => function($model) {
+                return $model->rFac->fac_name;
+            }],
+            [ 'attribute' => 'r_cmp_id', 'filter' => ArrayHelper::map(RefUniv::find()->all(), 'r_cmp_id', 'cam_name'),
+            'value' => function($model) {
+                return $model->rCmp->cam_name;
+            }],
+            */
             'r_Aeducation:ntext',
             'r_Meducation:ntext',
             'r_Beducation:ntext',

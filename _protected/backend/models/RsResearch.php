@@ -1,7 +1,7 @@
 <?php
 
 namespace backend\models;
-
+use dosamigos\datepicker\DatePicker;
 use Yii;
 
 /**

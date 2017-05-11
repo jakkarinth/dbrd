@@ -6,12 +6,12 @@ return [
     'components' => [
         'formatter'=>[
             'class'=>'yii\i18n\Formatter',
-            'dateFormat'=>'php:d mm Y',
-            'datetimeFormat'=>'php:d mm Y H:i:s',
+            'dateFormat'=>'php:yyyy-mm-d',
+            'datetimeFormat'=>'php:yy-mm-d H:i:s',
             'timeFormat'=>'php:H:i:s',
             'timeZone'=>'Asia/Bangkok',
         ],
-        
+
         'assetManager' => [
             'bundles' => [
                 // we will use bootstrap css from our theme
